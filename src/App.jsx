@@ -1,4 +1,4 @@
-import Home from './pages/Home';
+import Router from './app/Router';
 import Login from './pages/Login';
 import { useState } from 'react';
 
@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       {user ? (
-        <Home user={user} />
+        <Router user={user} />
       ) : (
         <Login setUser={setUser} />
       )}

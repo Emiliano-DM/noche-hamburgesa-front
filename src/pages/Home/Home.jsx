@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const eventosMock = [
   {
@@ -20,7 +21,9 @@ const Home = () => {
     <div style={{ padding: "2rem" }}>
       <header style={{ display: "flex", justifyContent: "space-between", marginBottom: "2rem" }}>
         <h1>Listado de Eventos</h1>
-        <button> Mi perfil</button>
+        <Link to='/profile/12'>
+        <button>Mi perfil</button>
+        </Link>
       </header>
 
       <ul style={{ listStyle: "none", padding: 0 }}>
@@ -34,27 +37,28 @@ const Home = () => {
             <h2>{evento.nombre}</h2>
             <p><strong>Fecha:</strong> {evento.fecha}</p>
             <p><strong>Lugar:</strong> {evento.lugar}</p>
-            <div style={{ marginTop: "1rem" }}>
-            </div>
           </li>
         ))}
       </ul>
-
-      <button
-        style={{
-          marginTop: "2rem",
-          padding: "0.8rem 1.2rem",
-          fontSize: "1rem",
-          borderRadius: "50%",
-          backgroundColor: "#FBBF3D",
-          border: "none",
-          cursor: "pointer"
-        }}
-      >
-        +
-      </button>
+      
+      <Link to='/create-event'>
+        <button
+          style={{
+            marginTop: "2rem",
+            padding: "0.8rem 1.2rem",
+            fontSize: "1rem",
+            borderRadius: "50%",
+            backgroundColor: "#FBBF3D",
+            border: "none",
+            cursor: "pointer"
+          }}
+        >
+          +
+        </button>
+      </Link>
     </div>
   );
 };
 
 export default Home;
+

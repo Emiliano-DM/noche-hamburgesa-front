@@ -1,3 +1,3 @@
-import CreateEvent from './CreateEvent'
+import CreateEvent from './CreateEvents'
 
 export default CreateEvent

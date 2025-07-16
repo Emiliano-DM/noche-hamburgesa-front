@@ -21,7 +21,7 @@ const handleLogin = () => {
         return res.text();
       })
     .then( data =>{
-      console.log(data)
+      console.log(1111111111111,data)
        setUser({ username: email });
     })
     .catch(err =>{

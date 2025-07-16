@@ -3,7 +3,9 @@ import Layout from '../components/Layout/Layout';
 import Home from '../pages/Home';
 import Profile from '../pages/Profile'
 import Events from '../pages/Events'
+import CreateEvent from '../pages/CreateEvent'
 import UserProvider from '../providers/UserProvider.jsx';
+import Error404 from '../pages/Error404/Error404.jsx';
 
 const Router = () => (
  
@@ -12,9 +14,10 @@ const Router = () => (
         <Layout>
           <Routes>   
               <Route path='/' element={<Home/>} />
-              <Route path='/profile' element={<Profile />} />
-              <Route path='/events' element={<Events />} />
-              <Route path="*" element={<div>404</div> } />
+              <Route path='/profile/:id' element={<Profile />} />
+              <Route path='/create-event' element={<CreateEvent/>}/>
+              <Route path='/events/:id' element={<Events />} />
+              <Route path="*" element={<Error404/> } />
           </Routes>
       </Layout>
       </UserProvider>
